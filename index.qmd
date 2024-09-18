@@ -1,6 +1,6 @@
 ---
 title: "Caleb Mogyabiyedom"
-image: Downloads\Modecai image.JPG
+image: Images/Modecai image.JPG
 toc: false
 about:
   template: jolla
@@ -12,7 +12,7 @@ about:
     - text: GitHub
       href: https://github.com/elevenw11se
     - text: Email
-      href: malito::camg2022@mymail.pomona.edu
+      href: mailto:camg2022@mymail.pomona.edu
 ---
 Hello,
 My name is Caleb Mogyabiyedom and I am Econ major. I'm from Ghana and I love playing and watching football. My favourite team is Arsenal(COYG!!!)
