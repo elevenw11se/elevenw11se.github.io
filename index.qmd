@@ -1,10 +1,10 @@
 ---
 title: "Caleb's  elevenw11se.github.io"
 ---
+Hello,
+My name is Caleb Mogyabiyedom and I am Econ major. I'm from Ghana and I love playing football. My favourite team is Arsenal(COYG!!!)
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
 1 + 1
