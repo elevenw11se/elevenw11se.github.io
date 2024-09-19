@@ -12,5 +12,12 @@
     "title": "Caleb Mogyabiyedom",
     "section": "",
     "text": "Hello, My name is Caleb Mogyabiyedom and I am Econ major. I’m from Ghana and I love playing and watching football. My favourite team is Arsenal(COYG!!!)"
+  },
+  {
+    "objectID": "Premier League Match Analysis.html",
+    "href": "Premier League Match Analysis.html",
+    "title": "Premier League Match Analysis",
+    "section": "",
+    "text": "library(tidytuesdayR)\nlibrary(ggplot2)\ntuesdata &lt;- tt_load('2023-04-04')\n\n---- Compiling #TidyTuesday Information for 2023-04-04 ----\n--- There is 1 file available ---\n\n\n── Downloading files ───────────────────────────────────────────────────────────\n\n  1 of 1: \"soccer21-22.csv\"\n\nsoccer &lt;- tuesdata$soccer\ncolnames(soccer)\n\n [1] \"Date\"     \"HomeTeam\" \"AwayTeam\" \"FTHG\"     \"FTAG\"     \"FTR\"     \n [7] \"HTHG\"     \"HTAG\"     \"HTR\"      \"Referee\"  \"HS\"       \"AS\"      \n[13] \"HST\"      \"AST\"      \"HF\"       \"AF\"       \"HC\"       \"AC\"      \n[19] \"HY\"       \"AY\"       \"HR\"       \"AR\"      \n\nggplot(soccer,aes(x=HS, y=FTHG))+\n geom_point()+\n labs(title = \"Relationship Between Shots taken and Goals Scored By Home Teams\",\n      x= \"Number of shots\", y= \"Number of goals\")\n\n\n\n\n\n\n\n#source of data: https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-04-04/readme.md and https://www.kaggle.com/datasets/evangower/premier-league-match-data"
   }
 ]
