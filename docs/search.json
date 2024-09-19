@@ -25,6 +25,6 @@
     "href": "SAFI Data Survey Analysis.html",
     "title": "SAFI Data Survey Analysis",
     "section": "",
-    "text": "library(tidytuesdayR)\nlibrary(ggplot2)\ntuesdata &lt;- tidytuesdayR::tt_load('2023-06-13')\n\n---- Compiling #TidyTuesday Information for 2023-06-13 ----\n--- There is 1 file available ---\n\n\n── Downloading files ───────────────────────────────────────────────────────────\n\n  1 of 1: \"safi_data.csv\"\n\nsafi_data &lt;- tuesdata$`safi_data`\n\nggplot(safi_data,aes(x=years_liv, y=liv_count))+\n geom_point()+\n labs(title = \"Relationship Between Years Living In Village and Livestock Count\",\n      x=\"Number of years\", y= \"Number of livestock\")"
+    "text": "library(tidytuesdayR)\nlibrary(ggplot2)\ntuesdata &lt;- tidytuesdayR::tt_load('2023-06-13')\n\n---- Compiling #TidyTuesday Information for 2023-06-13 ----\n--- There is 1 file available ---\n\n\n── Downloading files ───────────────────────────────────────────────────────────\n\n  1 of 1: \"safi_data.csv\"\n\nsafi_data &lt;- tuesdata$`safi_data`\n\nggplot(safi_data,aes(x=years_liv, y=liv_count))+\n geom_point()+\n labs(title = \"Relationship Between Years Living In Village and Livestock Count\",\n      x=\"Number of years\", y= \"Number of livestock\")\n\n\n\n\n\n\n\n\n#source of data:https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-06-13/readme.md and https://datacarpentry.org/socialsci-workshop/data/"
   }
 ]
