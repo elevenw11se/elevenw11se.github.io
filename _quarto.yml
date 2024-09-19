@@ -9,15 +9,16 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      -Premier League Match Analysis.qmd
-      -SAFI Data Survey Analysis.qmd
+      - Premier League Match Analysis.qmd
+      - SAFI Data Survey Analysis.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-    page-layout:full
+    page-layout: full
+    
     
 
 
