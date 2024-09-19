@@ -18,6 +18,10 @@ ggplot(safi_data,aes(x=years_liv, y=liv_count))+
  geom_point()+
  labs(title = "Relationship Between Years Living In Village and Livestock Count",
       x="Number of years", y= "Number of livestock")
-```
+
+
+
 #source of data:https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-06-13/readme.md  and https://datacarpentry.org/socialsci-workshop/data/
+```
+
 
