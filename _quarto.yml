@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      -Premier League Match Analysi.qmd
+      -Premier League Match Analysis.qmd
       -SAFI Data Survey Analysis.qmd
 
 format:
