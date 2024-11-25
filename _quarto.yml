@@ -11,6 +11,8 @@ website:
       - about.qmd
       - Premier League Match Analysis.qmd
       - SAFI Data Survey Analysis.qmd
+      - href: Project 3.qmd
+        text: Birth Count Analysis
 
 
 format:

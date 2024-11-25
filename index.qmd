@@ -13,6 +13,7 @@ about:
       href: https://github.com/elevenw11se
     - text: Email
       href: mailto:camg2022@mymail.pomona.edu
+  
 ---
 Hello,
 My name is Caleb Mogyabiyedom and I am Econ major. I'm from Ghana and I love playing and watching football. My favourite team is Arsenal(COYG!!!)
