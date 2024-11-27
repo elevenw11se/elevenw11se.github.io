@@ -58,7 +58,7 @@ FROM StudyFrequencies
 ORDER BY Identifier, Frequency
 ")
 
-# Create custom legend labels
+
 figure1_data <- figure1_data %>%
   mutate(StudyLabel = paste(
     AuthorsShortList, 
