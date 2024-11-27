@@ -11,10 +11,11 @@ website:
       - about.qmd
       - Premier League Match Analysis.qmd
       - SAFI Data Survey Analysis.qmd
+      - SQL WAI Analysis.qmd
       - href: Project 3.qmd
         text: Birth Count Analysis
-      - href: SQL WAI Analysis.qmd
-        text: SQL WAI Analysis
+      
+        
 
 
 format:
