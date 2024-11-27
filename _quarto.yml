@@ -8,12 +8,17 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - Premier League Match Analysis.qmd
-      - SAFI Data Survey Analysis.qmd
-      - SQL WAI Analysis.qmd
+      - href: about.qmd
+        text: About
+      - href: Premier League Match Analysis.qmd
+        text: Premier League Match Analysis
+      - href: SAFI Data Survey Analysis.qmd
+        text: SAFI Data Survey Analysis
       - href: Project 3.qmd
         text: Birth Count Analysis
+      - href: SQL WAI Analysis.qmd
+        text: SQL WAI Analysis
+    
       
         
 
