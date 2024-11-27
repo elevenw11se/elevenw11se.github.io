@@ -13,6 +13,8 @@ website:
       - SAFI Data Survey Analysis.qmd
       - href: Project 3.qmd
         text: Birth Count Analysis
+      - href: SQL WAI Analysis.qmd
+      - text: SQL WAI Analysis.qmd
 
 
 format:
