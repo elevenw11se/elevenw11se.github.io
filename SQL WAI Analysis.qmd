@@ -13,14 +13,14 @@ library(RMariaDB)
 library(tidyverse)
 library(ggplot2)
 
-# Connect to database
+
 con_wai <- dbConnect(
   MariaDB(), host = "scidb.smith.edu",
   user = "waiuser", password = "smith_waiDB", 
   dbname = "wai"
 )
 
-# Fetch the joined data
+
 figure1_data <- dbGetQuery(con_wai, "
 WITH StudyFrequencies AS (
     SELECT 
@@ -68,7 +68,7 @@ figure1_data <- figure1_data %>%
     sep = ", "
   ))
 
-# Recreate Figure 1
+
 ggplot(figure1_data, aes(x = Frequency, y = MeanAbsorbance, color = Identifier)) +
   geom_line(size = 1) +
   geom_point(size = 2) +
@@ -91,7 +91,7 @@ ggplot(figure1_data, aes(x = Frequency, y = MeanAbsorbance, color = Identifier))
   ) +
   guides(color = guide_legend(ncol = 1))
 
-# Close database connection
+
 dbDisconnect(con_wai)
 ```
 The graph above,illustrates mean absorbances for different WAI studies across a specific frequency range with each line representing a specific study. For most of the studies, there is a slight increase in the mean absorbanses at 281Hz.
@@ -107,14 +107,14 @@ library(RMariaDB)
 library(ggplot2)
 
 
-# Connect to database
+
 con_wai <- dbConnect(
   MariaDB(), host = "scidb.smith.edu",
   user = "waiuser", password = "smith_waiDB", 
   dbname = "wai"
 )
 
-# Fetch the joined data
+
 joined_data <- dbGetQuery(con_wai, "
 WITH StudyDetails AS (
     SELECT 
@@ -150,7 +150,7 @@ SELECT * FROM StudyDetails
 ORDER BY Identifier, Frequency
 ")
 
-# Visualize mean absorbance by sex
+
 sex_plot <- ggplot(joined_data, aes(x = Frequency, y = MeanAbsorbance, color = Sex)) +
   geom_line(aes(group = interaction(Sex, Identifier))) +
   geom_point() +
@@ -162,7 +162,7 @@ sex_plot <- ggplot(joined_data, aes(x = Frequency, y = MeanAbsorbance, color = S
   ) +
   theme_minimal()
 
-# Visualize mean absorbance by race
+
 race_plot <- ggplot(joined_data, aes(x = Frequency, y = MeanAbsorbance, color = Race)) +
   geom_line(aes(group = interaction(Race, Identifier))) +
   geom_point() +
@@ -174,11 +174,11 @@ race_plot <- ggplot(joined_data, aes(x = Frequency, y = MeanAbsorbance, color = 
   ) +
   theme_minimal()
 
-# Print plots
+
 print(sex_plot)
 print(race_plot)
 
-# Close database connection
+
 dbDisconnect(con_wai)
 
 ```
