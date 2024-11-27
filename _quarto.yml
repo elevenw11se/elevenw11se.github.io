@@ -14,7 +14,7 @@ website:
       - href: Project 3.qmd
         text: Birth Count Analysis
       - href: SQL WAI Analysis.qmd
-      - text: SQL WAI Analysis
+        text: SQL WAI Analysis
 
 
 format:
