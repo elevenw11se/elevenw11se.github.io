@@ -1,5 +1,6 @@
 ---
-title: "Project 3"
+title: "Birth Count Analysis"
+author: "Caleb Mogyabiyedom"
 editor: visual
 ---
 
