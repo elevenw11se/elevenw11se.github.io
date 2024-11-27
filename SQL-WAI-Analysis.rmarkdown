@@ -6,7 +6,9 @@ editor: visual
 
 
 
+
 The goal of this analysis is to explore how mean absorbance varies across studies and demographic groups within the Wideband Acoustic Immittance (WAI) database. To begin with, I will I will recreate Figure 1 by analyzing the trends, focusing on mean absorbance values across a specific range of frequencies. 
+
 
 ```{r}
 library(RMariaDB)
@@ -94,12 +96,14 @@ ggplot(figure1_data, aes(x = Frequency, y = MeanAbsorbance, color = Identifier))
 # Close database connection
 dbDisconnect(con_wai)
 ```
+
 The graph above,illustrates mean absorbances for different WAI studies across a specific frequency range with each line representing a specific study. For most of the studies, there is a slight increase in the mean absorbanses at 281Hz.
 
 
 
 
 For the second aspect of this analysis, I will explore group differences by sex and race, investigating how these demographic variables influence mean absorbance trends. And then, I will calculate mean absorbance for each group across frequencies and visualize these trends with labeled plots.
+
 
 ```{r}
 library(DBI)
@@ -183,6 +187,7 @@ dbDisconnect(con_wai)
 
 ```
 
+
 The " Mean Absorbances by Sex Across Frequencies" graph illustrates how mean absorbance varies across frequencies for different sex groups. The variation in absorbance between the sexes is visible across frequencies.
 
 The "Mean Absorbance by Race Across Frequencies" graph also shows the mean absorbance across frequencies for different races.
@@ -196,3 +201,4 @@ To analyze group differences, I examined the impact of sex and race on mean abso
 
 
 DATA SOURCE:https://www.science.smith.edu/wai-database/
+
