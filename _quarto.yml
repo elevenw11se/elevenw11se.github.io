@@ -16,11 +16,11 @@ website:
         menu:
           - href: Netflix Shows And Movies Analysis.qmd
             text: Netflix Shows And Movies Analysis
-          - href: Premier_League_Match_Analysis.qmd
+          - href: Premier League Match Analysis.qmd
             text: Premier League Match Analysis
-          - href: SAFI_Data_Survey_Analysis.qmd
+          - href: SAFI_Data Survey Analysis.qmd
             text: SAFI Data Survey Analysis
-          - href: Project_3.qmd
+          - href: Project 3.qmd
             text: Birth Count Analysis
           - href: SQL_WAI_Analysis.qmd
             text: SQL WAI Analysis
