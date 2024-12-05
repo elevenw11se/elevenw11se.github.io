@@ -1,3 +1,5 @@
+
+
 project:
   type: website
   output-dir: docs
@@ -10,16 +12,18 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: Premier League Match Analysis.qmd
-        text: Premier League Match Analysis
-      - href: SAFI Data Survey Analysis.qmd
-        text: SAFI Data Survey Analysis
-      - href: Project 3.qmd
-        text: Birth Count Analysis
-      - href: SQL WAI Analysis.qmd
-        text: SQL WAI Analysis
-      - href: Netflix Shows And Movies Analysis.qmd
-        text: Netflix Shows And Movies Analysis
+      - text: "Data Viz"  
+        menu:
+          - href: Netflix Shows And Movies Analysis.qmd
+            text: Netflix Shows And Movies Analysis
+          - href: Premier_League_Match_Analysis.qmd
+            text: Premier League Match Analysis
+          - href: SAFI_Data_Survey_Analysis.qmd
+            text: SAFI Data Survey Analysis
+          - href: Project_3.qmd
+            text: Birth Count Analysis
+          - href: SQL_WAI_Analysis.qmd
+            text: SQL WAI Analysis
     
       
         
