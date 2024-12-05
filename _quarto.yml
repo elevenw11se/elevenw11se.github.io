@@ -18,6 +18,8 @@ website:
         text: Birth Count Analysis
       - href: SQL WAI Analysis.qmd
         text: SQL WAI Analysis
+      - href: Netflix Shows And Movies Analysis.qmd
+        text: Netflix Shows And Movies Analysis
     
       
         
