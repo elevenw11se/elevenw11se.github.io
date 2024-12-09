@@ -24,7 +24,7 @@ website:
             text: Birth Count Analysis
           - href: SQL WAI Analysis.qmd
             text: SQL WAI Analysis
-          - href: Netflix Analysis(Extended).qmd
+          - href: Netflix Analysis(Extended).html
             text: Netflix Analysis Slides
          
     
