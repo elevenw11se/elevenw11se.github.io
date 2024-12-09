@@ -176,8 +176,8 @@ african_movies_by_year <- african_movies |>
 
 
 african_plot<- ggplot(african_movies_by_year, aes(x = year_added, y = count)) +
-  geom_line(color = "blue", size = 1) +
-  geom_point(color = "red", size = 2) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(color = "red", linewidth = 2) +
   labs(
     title = "Number of African Movies Added to Netflix Over Time",
     x = "Year Added",
