@@ -16,11 +16,11 @@ execute:
 ---
 
 # Introduction
-This dataset consists of tv shows and movies available on Netflix as of 2021. The dataset is collected from Flixable which is a third-party Netflix search engine.
-This analysis will explore the relationships between TV Shows and Movies From 2008 to 2021 on Netflix
 
+This dataset consists of tv shows and movies available on Netflix as of 2021. The dataset is collected from Flixable which is a third-party Netflix search engine. This analysis will explore the relationships between TV Shows and Movies From 2008 to 2021 on Netflix
 
 # Data Preparation
+
 ```{r}
 
 library(tidyverse)
@@ -42,6 +42,7 @@ head(netflix_titles_updated)
 ```
 
 ## Proportion Code
+
 ```{r}
 
 
@@ -66,17 +67,18 @@ proportion_plot_1 <- ggplot(proportion_data, aes(x = year_added, y = proportion,
 
 ```
 
+## Proportions of TV Shows And Movies
 
-## Proportions of TV Shows And Movies 
 ```{r}
 proportion_plot_1
 ```
 
-## . 
+## .
+
 This plot shows the proportion of TV shows and movies added to Netflix each year. This is a stacked bar chart, where each year is represented by a bar, with segments showing the proportion of TV shows and movies.In the graph, movies tended to dominate the viewing options expecially from 2009 to 2012. Although TV Shows in 2008 had the same as movies. In recent years however,the proportion of TV shows have increased with about 25 percent of viewing options being TV shows.
 
-
 # Trend Code
+
 ```{r}
 
 trend_plot <- netflix_titles_updated |>
@@ -93,19 +95,17 @@ trend_plot <- netflix_titles_updated |>
 ```
 
 ## Trend Plot
+
 ```{r}
 trend_plot
 ```
 
+## .
 
-
-##                                                                                                        .
 This plot shows the actual counts of TV shows and movies added per year according to the dataset. This is a line plot with different colors representing movies and TV shows. Between 2015 and 2020, they both experienced steep growths however movies added far outweighed TV Shows added
 
+# Variation of African Movies Across The Years
 
-
-
-#  Variation of African Movies Across The Years
 ```{r}
 
 african_movies <- netflix_titles |>
@@ -138,12 +138,13 @@ african_plot<- ggplot(african_movies_by_year, aes(x = year_added, y = count)) +
 ```
 
 ## Plot
+
 ```{r}
 african_plot
 ```
 
-
 # Genre of TV Shows And Movies
+
 ```{r}
 
 genres <- c("Thriller", "Action", "Dramas", "Romantic", "Horror", "Crime", "Sci-Fi", "Fantasy", "Comedies", "Documentaries", "Kids\' TV")
@@ -169,18 +170,14 @@ genre_plot<- ggplot(genre,aes(x = year_added, y = count, fill = type))+
 
 ```
 
-
-
-
-
 ## Plot Of Variations In Number Of Movies And TV
+
 ```{r}
 genre_plot
 ```
 
---- 
+------------------------------------------------------------------------
+
 The third plot, "Variations in Number of Movies and TV Shows by Genre and Year", shows how different genres have varied over the years with respect to both TV Shows and Movies. In recent years, there's been growth in all the genres, however Comedies, Dramas, Documentary and Action movies rose more highly. Although Crimes, Kid's TV and Romantic movies have all risen in the TV Shows category, they are still below that of movies.
 
 ## Conclusion
-
-
