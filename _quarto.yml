@@ -25,7 +25,7 @@ website:
           - href: SQL WAI Analysis.qmd
             text: SQL WAI Analysis
           - href: Netfix Analysis(Extended).qmd
-          - text: Netfix Analysis(Extended)
+            text: Netfix Analysis(Extended)
     
       
         
