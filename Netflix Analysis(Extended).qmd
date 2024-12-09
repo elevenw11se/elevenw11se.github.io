@@ -2,7 +2,6 @@
 title: "An Analysis Of Netflix Movie Trends"
 author: "Caleb Mogyabiyedom"
 subtitle: "9th December 2024"
-editor: visual
 format:
   revealjs:
     scrollable: true
