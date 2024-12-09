@@ -1,0 +1,186 @@
+---
+title: "An Analysis Of Netflix Movie Trends"
+author: "Caleb Mogyabiyedom"
+subtitle: "8th December 2024"
+editor: visual
+format:
+  revealjs:
+    scrollable: true
+    slide-number: true
+    show-slide-number: all
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introduction
+This dataset consists of tv shows and movies available on Netflix as of 2021. The dataset is collected from Flixable which is a third-party Netflix search engine.
+This analysis will explore the relationships between TV Shows and Movies From 2008 to 2021 on Netflix
+
+
+# Data Preparation
+```{r}
+
+library(tidyverse)
+library(ggplot2)
+netflix_titles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-20/netflix_titles.csv')
+
+netflix_titles_updated <- netflix_titles |>
+  distinct() |> 
+  
+  mutate(year_added = str_extract(date_added, "\\d{4}"),
+         year_added = str_replace_na(year_added, "Unknown"))|>
+  mutate(type = str_to_upper(type))|>
+  
+  filter(year_added != "Unknown")
+
+head(netflix_titles_updated)
+
+
+```
+
+## Proportion Code
+```{r}
+
+
+
+proportion_data <- netflix_titles_updated |>
+  group_by(year_added, type) |>
+  summarise(count = n()) |>
+  ungroup() |>
+  group_by(year_added) |>
+  mutate(proportion = count / sum(count))
+
+
+proportion_plot_1 <- ggplot(proportion_data, aes(x = year_added, y = proportion, fill = type)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(title = "Proportion of TV Shows and Movies by Year", 
+       x = "Year Added", 
+       y = "Proportion", 
+       fill = "Type")
+
+
+ 
+
+```
+
+
+## Proportions of TV Shows And Movies 
+```{r}
+proportion_plot_1
+```
+
+## . 
+This plot shows the proportion of TV shows and movies added to Netflix each year. This is a stacked bar chart, where each year is represented by a bar, with segments showing the proportion of TV shows and movies.In the graph, movies tended to dominate the viewing options expecially from 2009 to 2012. Although TV Shows in 2008 had the same as movies. In recent years however,the proportion of TV shows have increased with about 25 percent of viewing options being TV shows.
+
+
+# Trend Code
+```{r}
+
+trend_plot <- netflix_titles_updated |>
+  count(year_added, type) |>
+  ggplot(aes(x = year_added, y = n, color = type, group = type)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Trend of TV Shows and Movies Added by Year", 
+       x = "Year Added", 
+       y = "Count", 
+       color = "Type")
+
+
+```
+
+## Trend Plot
+```{r}
+trend_plot
+```
+
+
+
+##                                                                                                        .
+This plot shows the actual counts of TV shows and movies added per year according to the dataset. This is a line plot with different colors representing movies and TV shows. Between 2015 and 2020, they both experienced steep growths however movies added far outweighed TV Shows added
+
+
+
+
+#  Variation of African Movies Across The Years
+```{r}
+
+african_movies <- netflix_titles |>
+  filter(
+    type == "Movie",                             
+    str_detect(country, "Ghana|Nigeria|South Africa|Egypt|Kenya|Morocco")  
+  )
+
+
+african_movies <- african_movies |>
+  mutate(year_added = str_extract(date_added, "\\d{4}")) |>
+  filter(!is.na(year_added)) 
+
+
+african_movies_by_year <- african_movies |>
+  group_by(year_added) |>
+  summarise(count = n()) |>
+  mutate(year_added = as.numeric(year_added)) 
+
+
+african_plot<- ggplot(african_movies_by_year, aes(x = year_added, y = count)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 2) +
+  labs(
+    title = "Number of African Movies Added to Netflix Over Time",
+    x = "Year Added",
+    y = "Count of Movies"
+  ) +
+  theme_minimal()
+```
+
+## Plot
+```{r}
+african_plot
+```
+
+
+# Genre of TV Shows And Movies
+```{r}
+
+genres <- c("Thriller", "Action", "Dramas", "Romantic", "Horror", "Crime", "Sci-Fi", "Fantasy", "Comedies", "Documentaries", "Kids\' TV")
+
+genre<- netflix_titles_updated|>
+  mutate(is_genre = str_detect(listed_in, str_c(genres, collapse = "|")))|>
+  mutate(genre_label = str_extract(listed_in, str_c(genres, collapse = "|")))|>
+  group_by(year_added, type, genre_label) |>
+  summarise(count = n())
+
+genre_plot<- ggplot(genre,aes(x = year_added, y = count, fill = type))+
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~ genre_label) + 
+  labs(title = "Variations in Number of Movies and TV Shows by Genre and Year",
+       x = "Year Added",
+       y = "Count of Titles",
+       fill = "Type")+
+       theme_minimal()
+
+  
+  
+
+
+```
+
+
+
+
+
+## Plot Of Variations In Number Of Movies And TV
+```{r}
+genre_plot
+```
+
+--- 
+The third plot, "Variations in Number of Movies and TV Shows by Genre and Year", shows how different genres have varied over the years with respect to both TV Shows and Movies. In recent years, there's been growth in all the genres, however Comedies, Dramas, Documentary and Action movies rose more highly. Although Crimes, Kid's TV and Romantic movies have all risen in the TV Shows category, they are still below that of movies.
+
+## Conclusion
+
+
