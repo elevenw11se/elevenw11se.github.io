@@ -16,7 +16,7 @@ execute:
 
 # Introduction
 
-This dataset consists of tv shows and movies available on Netflix as of 2021. The dataset is collected from Flixable which is a third-party Netflix search engine. This analysis will explore the relationships between TV Shows and Movies From 2008 to 2021 on Netflix
+This dataset consists of tv shows and movies available on Netflix as of 2021. The dataset is collected from Flixable which is a third-party Netflix search engine. This analysis will explore the relationships between TV Shows and Movies From 2008 to 2021 on Netflix.
 
 # Data Preparation
 
