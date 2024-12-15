@@ -11,7 +11,8 @@ format: html
 ```{r}
 library(tidytuesdayR)
 library(ggplot2)
-tuesdata <- tt_load('2023-04-04')
+
+tuesdata <- suppressMessages(tt_load('2023-04-04'))
 soccer <- tuesdata$soccer
 colnames(soccer)
 
