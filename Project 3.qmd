@@ -4,12 +4,13 @@ author: "Caleb Mogyabiyedom"
 editor: visual
 ---
 
-
 ```{r}
+suppressPackageStartupMessages({
 library(openintro)
 library(ggplot2)
 library(purrr)
 library(dplyr)
+})
 
 data("present")
 head(present)
@@ -19,18 +20,11 @@ head(present)
 
 1.  Is there a statistically significant difference in the number of boys and girls born in the U.S. each year from 1940 to 2002?
 
-2.  -Null Hypothesis (H0): There is no difference in the mean number of boys and girls born each year.
-    -Alternative hypothesis(H1): There is a difference in the mean number of boys and girls born each year.
-
-    
+2.  -Null Hypothesis (H0): There is no difference in the mean number of boys and girls born each year. -Alternative hypothesis(H1): There is a difference in the mean number of boys and girls born each year.
 
 3.  Permutation Test
-  - Shuffle the gender labels each year to simulate the null distribution of birth counts under the assumption of no difference between boys and girls.
-  -Calculate the observed difference in mean birth counts
-  -Compare the observed difference to the distribution of permuted differences to estimate a p-value.
 
-
-
+-   Shuffle the gender labels each year to simulate the null distribution of birth counts under the assumption of no difference between boys and girls. -Calculate the observed difference in mean birth counts -Compare the observed difference to the distribution of permuted differences to estimate a p-value.
 
 ```{r}
 observed_diff <- mean(present$boys) - mean(present$girls)
@@ -64,14 +58,11 @@ p_value
 
 
 ```
-The histogram represents the distribution of differences in means (boys - girls) under the null hypothesis, where the gender labels were randomly shuffled.
-The distribution is approximately centered around zero, which is expected if there is no real difference between the two groups (boys and girls).
+
+The histogram represents the distribution of differences in means (boys - girls) under the null hypothesis, where the gender labels were randomly shuffled. The distribution is approximately centered around zero, which is expected if there is no real difference between the two groups (boys and girls).
 
 The red line which is located in the far right indicates the observed difference in means between boys and girls in the actual data.
 
-
 Since the observed difference is in the far-right tail of the null distribution, it means that this difference is unlikely to occur by random chance. This is further supported by the size of the p-value which is 0.011. This is less than 0.05 so we reject the null hypothesis.
 
-
-Source of Data: https://github.com/OpenIntroStat/openintro/blob/HEAD/R/data-present.R
-Co-authored-by: Mine Cetinkaya-Rundel <cetinkaya.mine@gmail.com>
+Source of Data: https://github.com/OpenIntroStat/openintro/blob/HEAD/R/data-present.R Co-authored-by: Mine Cetinkaya-Rundel [cetinkaya.mine\@gmail.com](mailto:cetinkaya.mine@gmail.com){.email}
