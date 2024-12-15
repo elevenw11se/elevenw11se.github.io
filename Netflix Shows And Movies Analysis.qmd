@@ -11,7 +11,8 @@ editor: visual
 
 suppressPackageStartupMessages(library(tidyverse))
 library(ggplot2)
-netflix_titles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-20/netflix_titles.csv')
+netflix_titles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-20/netflix_titles.csv',
+show_col_types = FALSE)
 
 
 
@@ -28,7 +29,7 @@ netflix_titles_updated <- netflix_titles |>
 
 proportion_data <- netflix_titles_updated |>
   group_by(year_added, type) |>
-  summarise(count = n()) |>
+  summarise(count = n(), .groups = "drop") |>
   ungroup() |>
   group_by(year_added) |>
   mutate(proportion = count / sum(count))
@@ -80,7 +81,7 @@ genre<- netflix_titles_updated|>
   mutate(is_genre = str_detect(listed_in, str_c(genres, collapse = "|")))|>
   mutate(genre_label = str_extract(listed_in, str_c(genres, collapse = "|")))|>
   group_by(year_added, type, genre_label) |>
-  summarise(count = n())
+  summarise(count = n(), .groups = "drop")
 #genre
 
  
