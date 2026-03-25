@@ -5,7 +5,7 @@ project:
   output-dir: docs
 
 website:
-  title: "elevenw11se.github.io"
+  title: "Caleb Mogyabiyedom"
   navbar:
     left:
       - href: index.qmd

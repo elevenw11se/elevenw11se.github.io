@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>elevenw11se.github.io - Caleb Mogyabiyedom</title>
+<title>Caleb Mogyabiyedom</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,11 +80,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">elevenw11se.github.io</span>
+    <span class="navbar-title">Caleb Mogyabiyedom</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-viz" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-viz" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Data Viz</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-data-viz">    
@@ -130,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -142,8 +142,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla content">
-  <img src="Images/Modecai image.JPG" class="about-image
+<div class="quarto-about-jolla">
+  <img src="photo.JPG" class="about-image
   round " style="height: 17em; width: 17em;">
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -152,9 +152,29 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
-<p>Hello, My name is Caleb Mogyabiyedom and I am an Econ major. I’m from Ghana and I love playing and watching football. My favourite team is Arsenal(COYG!!!)</p>
+<section id="caleb-mogyabiyedom" class="level2">
+<h2 data-anchor-id="caleb-mogyabiyedom"><strong>Caleb Mogyabiyedom</strong></h2>
+<section id="economics-data-science-financial-markets" class="level3">
+<h3 data-anchor-id="economics-data-science-financial-markets"><em>Economics × Data Science × Financial Markets</em></h3>
+<blockquote class="blockquote">
+<p>I use data to analyze markets, evaluate investments, and uncover insights—especially in emerging economies.</p>
+</blockquote>
+<hr>
+<p>📊 <strong>What I Do</strong> - Financial &amp; Macroeconomic Analysis<br>
+- Data-Driven Decision Making<br>
+- Real Estate &amp; Market Research</p>
+<p>🌍 <strong>Focus Areas</strong> - Emerging Markets<br>
+- Investment Analysis<br>
+- Economic Strategy</p>
+<hr>
+<p>🚀 <strong>Featured Work</strong> - Ghana Macroeconomic Dashboard<br>
+- Accra Rental Market Analysis<br>
+- Labor Force Participation Study</p>
+<p>👉 Explore my work in the <strong>Data Viz</strong> tab above.</p>
 
 
+</section>
+</section>
 </main> 
   <hr class="about-sep">
    <div class="about-links">
@@ -164,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
   <a href="https://github.com/elevenw11se" class="about-link" rel="" target="">
      <span class="about-link-text">GitHub</span>
   </a>
-  <a href="mailto:camg2022@mymail.pomona.edu" class="about-link" rel="" target="">
+  <a href="mailto:koficaleb11@gmail.com" class="about-link" rel="" target="">
      <span class="about-link-text">Email</span>
   </a>
 </div>
@@ -342,18 +362,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -385,7 +394,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -393,7 +424,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

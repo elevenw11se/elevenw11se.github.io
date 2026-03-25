@@ -1,6 +1,6 @@
 ---
 title: "Caleb Mogyabiyedom"
-image: Images/Modecai image.JPG
+image: photo.JPG
 toc: false
 about:
   template: jolla
@@ -12,11 +12,35 @@ about:
     - text: GitHub
       href: https://github.com/elevenw11se
     - text: Email
-      href: mailto:camg2022@mymail.pomona.edu
-  
+      href: mailto:koficaleb11@gmail.com
 ---
-Hello,
-My name is Caleb Mogyabiyedom and I am an Econ major. I'm from Ghana and I love playing and watching football. My favourite team is Arsenal(COYG!!!)
+
+## **Caleb Mogyabiyedom**
+
+### *Economics × Data Science × Financial Markets*
+
+> I use data to analyze markets, evaluate investments, and uncover insights—especially in emerging economies.
+
+---
+
+📊 **What I Do**
+- Financial & Macroeconomic Analysis  
+- Data-Driven Decision Making  
+- Real Estate & Market Research  
+
+🌍 **Focus Areas**
+- Emerging Markets  
+- Investment Analysis  
+- Economic Strategy  
+
+---
+
+🚀 **Featured Work**
+- Ghana Macroeconomic Dashboard  
+- Accra Rental Market Analysis  
+- Labor Force Participation Study  
+
+👉 Explore my work in the **Data Viz** tab above.
 
 
 
